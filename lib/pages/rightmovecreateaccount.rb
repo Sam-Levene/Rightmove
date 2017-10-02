@@ -23,12 +23,13 @@ class Pages::Rightmovecreateaccount < SitePrism::Page
 
 	def enterValidDetails
 		#Input vaid data here
-		iterator = "7" #Change this to repeat the test
-
+		iterator = "1" #Change this to repeat the test
+		
+		#Change these details so that it is your own details
 		fill_in('title', :with => 'Mr')
-		fill_in('firstName', :with => 'Sam')
-		fill_in('lastName', :with => 'Levene')
-		fill_in('email', :with => 'nodkane12+'+iterator+'@gmail.com')
+		fill_in('firstName', :with => 'Joe')
+		fill_in('lastName', :with => 'Bloggs')
+		fill_in('email', :with => 'joe.bloggs+'+iterator+'@gmail.com')
 		fill_in('password1', :with => 'password')
 		fill_in('password2', :with => 'password')
 		page.find(:xpath, "//*[@id=\"registration\"]/div[6]/div").click
